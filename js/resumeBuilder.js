@@ -112,7 +112,7 @@ var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[1].
 var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
 $("#header").append(formattedBioPic);
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#header").append(formattedName);
+$("#header").append(formattedName); 
 
 if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
@@ -150,6 +150,20 @@ function displayWork() {
     }
 }
 displayWork();
+
+//Internationalize Names exercise
+$("#main").append(internationalizeButton);
+function inName() {
+    var splitName = bio.name.trim().split(" ");
+    splitName[0] = splitName[0].toLowerCase();
+    console.log(splitName[0][0]);
+    splitName[0] = splitName[0][0].toUpperCase() + splitName[0].slice(1).toLowerCase();
+    splitName[1] = splitName[1].toUpperCase();
+    var internationalName = splitName[0] + " " + splitName[1];
+    return internationalName;
+}
+
+
 //$("#header").append(formattedEmail);
 //$("#header").append(formattedGithub);
 //$("#header").append(formattedLocation);
