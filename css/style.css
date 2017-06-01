@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #6492db;
   line-height: 48px;
   display: inline;
 }
@@ -100,7 +100,7 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #6492db;
   display: none;
 }
 
@@ -166,7 +166,9 @@ ul {
 
 img {
   padding: 10px;
-
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 span {
